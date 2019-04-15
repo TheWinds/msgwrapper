@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package msgwrapper;
+
+import "google/protobuf/any.proto";
+
+message Response {
+    // 状态码
+    int32 code = 1;
+    // 提示信息
+    string message = 2;
+    // 详情
+    string detail = 3;
+    // 数据体
+    google.protobuf.Any data = 4;
+}
